@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NEON TETRIS</title>
+  <meta name="description" content="ブラウザで遊べるネオンテトリス">
+  <link rel="stylesheet" href="tetris.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="brand">
+      <p class="eyebrow">BLOCK PUZZLE / 2026</p>
+      <h1>NEON <span>TETRIS</span></h1>
+    </header>
+
+    <section class="game-layout" aria-label="テトリスゲーム">
+      <aside class="panel stats-panel">
+        <div><span>SCORE</span><strong id="score">000000</strong></div>
+        <div><span>LINES</span><strong id="lines">0</strong></div>
+        <div><span>LEVEL</span><strong id="level">1</strong></div>
+      </aside>
+
+      <div class="board-wrap">
+        <canvas id="game" width="300" height="600" aria-label="テトリスの盤面"></canvas>
+        <div id="overlay" class="overlay">
+          <p id="overlay-kicker">READY?</p>
+          <h2 id="overlay-title">NEON TETRIS</h2>
+          <button id="start" type="button">ゲームスタート</button>
+        </div>
+      </div>
+
+      <aside class="panel next-panel">
+        <span>NEXT</span>
+        <canvas id="next" width="120" height="120" aria-label="次のブロック"></canvas>
+        <button id="pause" type="button" disabled>一時停止</button>
+        <button id="restart" class="ghost" type="button">リスタート</button>
+      </aside>
+    </section>
+
+    <section class="touch-controls" aria-label="スマートフォン操作">
+      <button type="button" data-action="left" aria-label="左へ移動">←</button>
+      <button type="button" data-action="rotate" aria-label="回転">↻</button>
+      <button type="button" data-action="right" aria-label="右へ移動">→</button>
+      <button type="button" data-action="down" aria-label="下へ移動">↓</button>
+      <button type="button" data-action="drop" aria-label="一気に落とす">DROP</button>
+    </section>
+
+    <footer>
+      <p><b>← →</b> 移動　<b>↑ / X</b> 回転　<b>↓</b> ソフトドロップ　<b>SPACE</b> ハードドロップ　<b>P</b> 一時停止</p>
+    </footer>
+  </main>
+  <script src="tetris.js"></script>
+</body>
+</html>
