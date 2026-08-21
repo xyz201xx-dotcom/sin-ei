@@ -40,4 +40,8 @@
 @media(max-width:680px){body{padding-bottom:62px}.trust-grid{grid-template-columns:1fr 1fr}.trust-grid>div{padding:16px 8px}.trust-grid strong{font-size:15px}.trust-grid span{font-size:10px}.floating-actions{display:none}.mobile-actions{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;height:62px;z-index:50}.mobile-actions a{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900}.mobile-line{background:#06c755}.mobile-call{display:flex;position:static;height:auto;background:var(--orange)}.map-card iframe{height:300px}}
 
 /* Before/After photo consistency */
-.works figure{overflow:hidden;border-radius:14px}.works figure img{width:100%;aspect-ratio:12/5.5;object-fit:cover;object-position:center}
+.works figure{overflow:hidden;border-radius:14px}.works figure img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center}
+
+/* Three Before/After examples */
+.works{display:block}.works-cases{display:grid;gap:26px}.work-case{display:grid;grid-template-columns:1fr 50px 1fr;gap:18px;align-items:center}.works-text{margin-top:24px}.work-case figure{margin:0}.work-case .arrow{text-align:center;color:var(--blue);font-size:34px}
+@media(max-width:900px){.work-case{grid-template-columns:1fr;gap:12px}.work-case .arrow{transform:rotate(90deg);line-height:1}.works-cases{gap:34px}}
